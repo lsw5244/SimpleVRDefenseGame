@@ -36,20 +36,15 @@ public class LaserPointer : MonoBehaviour
             // 라인의 끝점의 위치를 레이캐스팅한 지점의 좌표로 변경
             line.SetPosition(1, new Vector3(0, 0, hit.distance));
 
-
             // 트리거 버튼을 클릭했을 경우에 클릭 이벤트를 발생시킴
             if (trigger.GetStateDown(hand))
             {
                 ExecuteEvents.Execute(hit.collider.gameObject
                     , new PointerEventData(EventSystem.current)
                     , ExecuteEvents.pointerClickHandler);
+            }
 
-                line.material.color = Color.gray;
-            }
-            if(trigger.GetStateUp(hand))
-            {
-                line.material.color = Color.black;
-            }
+
 
         }
         else  //충돌 안했을 때

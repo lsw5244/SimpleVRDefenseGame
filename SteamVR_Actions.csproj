@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{16D08C9B-404F-2A8F-DE59-28DD308BA460}</ProjectGuid>
+    <ProjectGuid>{ED02ED0D-0CFE-89D7-8284-C97D34D55F40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>SteamVR_Actions</AssemblyName>
@@ -71,10 +71,10 @@
     <Compile Include="Assets\SteamVR_Input\SteamVR_Input_Initialization.cs" />
     <None Include="Assets\SteamVR_Input\SteamVR_Actions.asmdef" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/PC1/Desktop/SimpleViveVRGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/PC1/Desktop/SimpleVRDefenseGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/PC1/Desktop/SimpleViveVRGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/PC1/Desktop/SimpleVRDefenseGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity 2019.3.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -269,7 +269,7 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>C:/Users/PC1/Desktop/SimpleViveVRGame/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/PC1/Desktop/SimpleVRDefenseGame/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/Unity 2019.3.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -619,7 +619,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SteamVR.csproj">
-      <Project>{8A5F5EC8-39B9-5B54-2D1E-DC47AD8FF4C5}</Project>
+      <Project>{A5A88A6E-A2CC-7041-4AAC-7FC702ACD79D}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
   </ItemGroup>
