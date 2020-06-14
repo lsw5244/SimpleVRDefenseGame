@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 1432638506482834623}
   - component: {fileID: 1350410157007424365}
   - component: {fileID: 7924380099487011385}
+  - component: {fileID: -3116481147482682432}
   m_Layer: 0
   m_Name: SlimePBR
   m_TagString: Untagged
@@ -74,7 +75,7 @@ Animator:
   m_GameObject: {fileID: 1434778435198007553}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 032e9c3d6b8f7bd4281b52741574f3af, type: 3}
-  m_Controller: {fileID: 9100000, guid: fb53b4d3a4f06844c90da7297e9082de, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4e6bffb1d2c8a99458d5a5eac2fa1170, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -95,7 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1035dc9fb80fa7349aa566730eafdf45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+--- !u!65 &-3116481147482682432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434778435198007553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1434823610689759989
 GameObject:
   m_ObjectHideFlags: 0
