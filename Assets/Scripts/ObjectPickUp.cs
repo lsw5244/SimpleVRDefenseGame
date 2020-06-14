@@ -49,7 +49,7 @@ public class ObjectPickUp : MonoBehaviour
         currentRigidbody.useGravity = false;  //오브젝트 중력 비활성화
         currentRigidbody.isKinematic = true;  //오브젝트 물리효과 비활성화
 
-        currentRigidbody.transform.position = myTransform.position;  //오브젝트의 위치를 컨트롤러 위치로 초기화 시킴
+        //currentRigidbody.transform.position = myTransform.position;  //오브젝트의 위치를 컨트롤러 위치로 초기화 시킴
         currentRigidbody.transform.parent = myTransform;    //오브젝트 차일드화 시키기 (부착)
 
     }
@@ -73,7 +73,7 @@ public class ObjectPickUp : MonoBehaviour
     //컨트롤러와 오브젝트 의에 충돌이 일어 났을 때
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Interactable"))
+        if (other.gameObject.CompareTag("AttackObject"))
         {
             //충돌이 일어난 오브젝트 추가
             contactRigidbody.Add(other.gameObject.GetComponent<Rigidbody>());
@@ -82,7 +82,7 @@ public class ObjectPickUp : MonoBehaviour
     //컨트롤러와 오브젝트 간의 충돌이 끝났을 때
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Interactable"))
+        if (other.gameObject.CompareTag("AttackObject"))
         {
             //충돌이 끝난 오브젝트 삭제
             contactRigidbody.Remove(other.gameObject.GetComponent<Rigidbody>());
