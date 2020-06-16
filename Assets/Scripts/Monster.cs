@@ -7,6 +7,8 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("GM").GetComponent<GameMaster>().monsterCount++;
+        Debug.Log(GameObject.Find("GM").GetComponent<GameMaster>().monsterCount);
         transform.LookAt(new Vector3(0, 0, 0));
     }
 

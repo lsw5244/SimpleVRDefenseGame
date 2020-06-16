@@ -9,12 +9,24 @@ public class GameMaster : MonoBehaviour
 
     public GameObject startUI;
     public GameObject gameInUI;
+    public GameObject gameoverUI;
 
     public GameObject[] monsters;
 
-    public Vector3 spawnPoint;
+    private Vector3 spawnPoint;
+    [HideInInspector]
+    public int monsterCount = 0;
 
-    int idx;
+    private void Update()
+    {
+        if(monsterCount >= 10) //10마리 쌓임
+        {
+            GameOver();
+        }
+    }
+
+
+
 
     public void StartButtonClick()  //시작버튼 클릭
     {
@@ -53,18 +65,13 @@ public class GameMaster : MonoBehaviour
                 spawnPoint = new Vector3(Random.Range(3, 9), 0, Random.Range(-10, 9));  //측면 스폰 장소 설정
             }
 
-            if(Random.Range(1, 101) >= 50)  // Slime, Turtle를 50%확률로 결정
-            {
-                idx = 0;
-            }
-            else
-            {
-                idx = 1;
-            }
-            GameObject newMonster = Instantiate(monsters[idx], spawnPoint, Quaternion.identity);  //몬스터 생성
-            
+            GameObject newMonster = Instantiate(monsters[(Random.Range(1, 100) % 2)], spawnPoint, Quaternion.identity);  // 랜덤 몬스터 생성
             
         }
+    }
+
+    void GameOver()
+    {
 
     }
 }
