@@ -6,6 +6,8 @@ TagManager:
   tags:
   - AttackObject
   - Monster
+  - Table
+  - Ground
   layers:
   - Default
   - TransparentFX
