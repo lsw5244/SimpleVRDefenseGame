@@ -40,7 +40,6 @@ public class GameMaster : MonoBehaviour
 
     public void StartButtonClick()  //시작버튼 클릭
     {
-        Debug.Log("START BTN CLICK@@@@@@@@@@@@@@@@@@@@");
         // LineRenderer 및 LaserPointer 활성화
         leftController.GetComponent<LaserPointer>().enabled = false;
         leftController.GetComponent<LineRenderer>().enabled = false;
@@ -57,14 +56,12 @@ public class GameMaster : MonoBehaviour
         foreach(Transform tr in attackObjectsSpawnPosition)
         {
             int idx = Random.Range(0, 100) % attackObjects.Length;
-            Debug.Log(idx);
             Instantiate(attackObjects[idx], tr.position, Quaternion.identity);
         }
     }
 
     public void GameRestartButtonClick()
     {
-        Debug.Log("RESET@@@@@@@@@@@@@@@@@@@@@");
         //게임 다시 시작(초기화)
         monsterCount = 0;
         score = 0;
