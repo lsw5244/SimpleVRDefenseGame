@@ -17,6 +17,8 @@ public class GameMaster : MonoBehaviour
     public GameObject gameoverUI;
 
     public GameObject[] monsters;
+    public GameObject[] attackObjects;
+    public Transform[] attackObjectsSpawnPosition;
 
     private Vector3 spawnPoint;
     [HideInInspector]
@@ -50,6 +52,14 @@ public class GameMaster : MonoBehaviour
         gameInUI.SetActive(true);
         // 몬스터 생성 시작
         StartCoroutine(SpawnMonster());
+
+        // 공격 오브젝트 6개 생성
+        foreach(Transform tr in attackObjectsSpawnPosition)
+        {
+            int idx = Random.Range(0, 100) % attackObjects.Length;
+            Debug.Log(idx);
+            Instantiate(attackObjects[idx], tr.position, Quaternion.identity);
+        }
     }
 
     public void GameRestartButtonClick()
@@ -59,7 +69,6 @@ public class GameMaster : MonoBehaviour
         monsterCount = 0;
         score = 0;
         isGameOver = false;
-
 
         // LineRenderer 및 LaserPointer 활성화
         leftController.GetComponent<LaserPointer>().enabled = false;
@@ -71,8 +80,8 @@ public class GameMaster : MonoBehaviour
         gameoverUI.SetActive(false);
         // 몬스터 생성 시작
         StartCoroutine(SpawnMonster());
-    }
 
+    }
 
     IEnumerator SpawnMonster()
     {
@@ -115,5 +124,10 @@ public class GameMaster : MonoBehaviour
         leftController.GetComponent<LineRenderer>().enabled = true;
         rightController.GetComponent<LaserPointer>().enabled = true;
         rightController.GetComponent<LineRenderer>().enabled = true;
+    }
+    // 공격 오브젝트 재생성
+    public void RespawnAttackObject(Vector3 pos)
+    {
+        Instantiate(attackObjects[Random.Range(0, 100) % attackObjects.Length], pos, Quaternion.identity);
     }
 }
