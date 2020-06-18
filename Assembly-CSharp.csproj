@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\ObjectPickUp.cs" />
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+    <None Include="Assets\LowPolyWeapons\LowPolyWeapons_ReadMe 1.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/PC1/Desktop/SimpleVRDefenseGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
